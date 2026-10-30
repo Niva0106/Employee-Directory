@@ -1,4 +1,4 @@
-import type { Employee, Department } from "./types.js";
+import type { Employee } from "./types.js";
 
 const employees: Employee[] = [
   {
