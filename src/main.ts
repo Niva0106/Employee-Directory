@@ -1,13 +1,16 @@
 import employees from "./employees.js";
+import { searchEmployees } from "./search.js";
+import type { Employee } from "./types.js";
 
 const employeeList = document.getElementById("employee-list");
+const searchInput = document.getElementById("search-input") as HTMLInputElement;
 
-function displayEmployees(): void {
+function displayEmployees(employeeData: Employee[]): void {
   if (!employeeList) return;
 
   employeeList.innerHTML = "";
 
-  employees.forEach((employee) => {
+  employeeData.forEach((employee) => {
     const employeeCard = document.createElement("div");
 
     employeeCard.innerHTML = `
@@ -22,4 +25,14 @@ function displayEmployees(): void {
   });
 }
 
-displayEmployees();
+function handleSearch(): void {
+  const searchTerm = searchInput.value;
+
+  const filteredEmployees = searchEmployees(employees, searchTerm);
+
+  displayEmployees(filteredEmployees);
+}
+
+searchInput.addEventListener("input", handleSearch);
+
+displayEmployees(employees);
