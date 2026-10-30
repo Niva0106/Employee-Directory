@@ -3,7 +3,7 @@ export interface Employee {
   role: string;
   department: Department;
   email: string;
-  muId: string;
+  muId: string | null;
 }
 
 export type Department =

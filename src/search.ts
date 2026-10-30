@@ -13,7 +13,7 @@ export function searchEmployees(
       employee.role.toLowerCase().includes(search) ||
       employee.department.toLowerCase().includes(search) ||
       employee.email.toLowerCase().includes(search) ||
-      employee.muId.toLowerCase().includes(search)
+      (employee.muId?.toLowerCase().includes(search) ?? false)
     );
   });
 }

@@ -25,7 +25,7 @@ function displayEmployees(employeeData: Employee[]): void {
       <p>Role: ${employee.role}</p>
       <p>Department: ${employee.department}</p>
       <p>Email: ${employee.email}</p>
-      <p>μLearn ID: ${employee.muId}</p>
+      <p>μLearn ID: ${employee.muId ?? "Not provided"}</p>
     `;
 
     employeeList.appendChild(employeeCard);
