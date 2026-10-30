@@ -1,6 +1,7 @@
 import employees from "./employees.js";
 import { searchEmployees } from "./search.js";
 import type { Employee } from "./types.js";
+import "./style.css";
 
 const employeeList = document.getElementById("employee-list");
 const searchElement = document.getElementById("search-input");
@@ -18,6 +19,7 @@ function displayEmployees(employeeData: Employee[]): void {
 
   employeeData.forEach((employee) => {
     const employeeCard = document.createElement("div");
+    employeeCard.className = "employee-card";
 
     employeeCard.innerHTML = `
       <h2>${employee.name}</h2>
@@ -28,6 +30,13 @@ function displayEmployees(employeeData: Employee[]): void {
     `;
 
     employeeList.appendChild(employeeCard);
+
+    if (employeeData.length === 0) {
+    employeeList.innerHTML = `
+        <p class="empty-message">No employees found.</p>
+    `;
+    return;
+    }
   });
 }
 

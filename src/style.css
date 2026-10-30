@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fc;
+  color: #172033;
+  min-height: 100vh;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  padding: 65px 20px 55px;
+  background: linear-gradient(135deg, #e9edff, #f2f0ff);
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+header p {
+  color: #68758e;
+  font-size: 16px;
+}
+
+/* Main content */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Search */
+
+#search-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid #dce2ef;
+  border-radius: 12px;
+  background: white;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+  margin-bottom: 30px;
+}
+
+#search-input:focus {
+  border-color: #7779ee;
+  box-shadow: 0 0 0 3px #7779ee20;
+}
+
+/* Employee list */
+
+#employee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Employee card */
+
+.employee-card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #e6eaf2;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px #24345c0a;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #24345c15;
+}
+
+.employee-card h2 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.employee-card p {
+  color: #65718a;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.employee-card .role {
+  display: inline-block;
+  background: #eef0ff;
+  color: #6265d8;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Empty search result */
+
+.empty-message {
+  text-align: center;
+  color: #8993a8;
+  padding: 35px 15px;
+  grid-column: 1 / -1;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  color: #8993a8;
+  font-size: 13px;
+  padding: 25px 15px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  header {
+    padding: 45px 15px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 25px 15px;
+  }
+}

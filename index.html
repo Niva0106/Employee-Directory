@@ -4,17 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Directory</title>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
-<body>
-  <h1>Employee Directory</h1>
-  <input
-    type="text"
-    id="search-input"
-    placeholder="Search employees..."
-  />
 
-  <div id="employee-list"></div>
+<body>
+
+  <header>
+    <h1>Employee Directory</h1>
+    <p>Find and explore our team members</p>
+  </header>
+
+  <main>
+    <input
+      type="text"
+      id="search-input"
+      placeholder="Search employees..."
+    >
+
+    <div id="employee-list"></div>
+  </main>
+
+  <footer>
+    μLearn Employee Directory · Built with TypeScript
+  </footer>
 
   <script type="module" src="/src/main.ts"></script>
+
 </body>
 </html>
