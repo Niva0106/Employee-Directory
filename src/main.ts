@@ -1,7 +1,6 @@
 import employees from "./employees.js";
 import { searchEmployees } from "./search.js";
 import type { Employee } from "./types.js";
-import "./style.css";
 
 const employeeList = document.getElementById("employee-list");
 const searchElement = document.getElementById("search-input");
